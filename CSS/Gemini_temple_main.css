@@ -1,0 +1,105 @@
+/* PAS TOUCHER */
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+/* PAS TOUCHER */
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    height: 75vh;
+    background-color: #fff;
+    margin: 7vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.box {
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 0;
+}
+
+section {
+    flex: 1;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 70vh;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.first-section {
+    background-image: url("../Others/Gemini_Temple/Pictures/Capture\ 36_JPG.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.first-section, .project-section {
+    color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-section {
+    background-image: url("../Others/Gemini_Temple/Pictures/Capture\ 15_edited.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.project-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.1%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.first-section a, .project-section a {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+}
+
+.first-section h2, .project-section h2 {
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+section div {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+section h2 {
+    background-color: rgb(180, 180, 180, 0.8);
+    border: 1px solid #000;
+    padding: 3%;
+    border-radius: 15px;
+    color: black;
+    text-decoration: none;
+    font-size: xx-large;
+}
+
+section h2:hover {
+    background-color: #dddddd;
+}

@@ -1,0 +1,27 @@
+/* PAS TOUCHER */
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+/* PAS TOUCHER */
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    height: fit-content;
+    background-color: #fff;
+    margin: 7vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
