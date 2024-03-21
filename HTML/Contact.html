@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <!-- Informations relatives au fonctionnement de la page -->
+    <head>
+        <!-- Métadonnées & titre -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leo Wygas - Portfolio</title>
+        <link rel="shortcut icon" href="../Others/Pictures/favicon.ico" />
+
+        <!-- Liens vers les fichiers CSS externes -->
+        <link rel="stylesheet" href="../CSS/Footer.css">
+        <link rel="stylesheet" href="../CSS/Header.css">
+        <link rel="stylesheet" href="../CSS/Contact.css">
+        
+        <!-- Lien vers les polices d'écriture externes -->
+        <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Single+Day&family=Amatic+SC&family=Big+Shoulders+Display:wght@400&display=swap" rel="stylesheet">
+        
+        <!-- Liens vers les fichiers Javascript externes -->
+        <script src="../Javascript/Contact.js"></script>
+
+        <!-- Autres balises head... -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="https://nominatim.org/release/leaflet-nominatim/leaflet-nominatim.js"></script>
+
+    </head>
+
+    <!-- Contenu de la page -->
+    <body>
+        <!-- Contenu commun à chaque page -->
+        <header>
+            <a href="Main.html" class="header-section Logo">
+                <img src="../Others/Pictures/Slimi_sansfond.png">
+            </a>
+            <a href="Main.html" class="header-section section1">
+                <h2>Leo Wygas Art Portfolio</h2>
+            </a>
+            <div class="header-section section2">
+                <div class="dropdown-container">
+                    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                    <lord-icon src="https://cdn.lordicon.com/jkzgajyr.json" trigger="hover" colors="primary:#ffffff">
+                    </lord-icon>
+                    <h4>Projects</h4>
+    
+                <!-- Menu déroulant -->
+                <div class="dropdown-menu">
+                    <ul>
+                        <li>
+                            <a href="3D_Face_Main.html" class="parent">3D Face</a>
+                            <!-- Sous-menu déroulant pour Menu Item 1 -->
+                            <ul class="sub-menu">
+                                <li><a href="3D_Face_Process.html">Process</a></li>
+                                <li><a href="3D_Face_Review.html">Result</a></li>
+                                <!-- Ajoutez d'autres sous-éléments au besoin -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="parent">Din Djarin's House</a>
+                            <!-- Sous-menu déroulant pour Menu Item 2 -->
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">Grogu Repotology</a>
+                                    <ul class="sub-sub-menu">
+                                        <li><a href="#">Sub Sub Item 1</a></li>
+                                        <li><a href="#">Sub Sub Item 2</a></li>
+                                        <!-- Ajoutez d'autres sous-éléments au besoin -->
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">House Process</a>
+                                    <ul class="sub-sub-menu">
+                                        <li><a href="#">Sub Sub Item 1</a></li>
+                                        <li><a href="#">Sub Sub Item 2</a></li>
+                                        <!-- Ajoutez d'autres sous-éléments au besoin -->
+                                    </ul>
+                                </li>
+                                <!-- Ajoutez d'autres sous-éléments au besoin -->
+                                <li><a href="#">Arsenal Process</a></li>
+                                <li><a href="#">Naboo Ship Repotology</a></li>
+                            </ul>
+                        </li>
+                        <!-- Ajoutez d'autres éléments de menu au besoin -->
+                        <li>
+                            <a href="Gemini_temple_main.html" class="parent">Gemini Temple</a>
+                            <!-- Sous-menu déroulant pour Menu Item 3 -->
+                            <ul class="sub-menu">
+                                <li><a href="Gemini_temple_details.html">Process</a></li>
+                                <li><a href="Gemini_temple_review.html">Result</a></li>
+                                <!-- Ajoutez d'autres sous-éléments au besoin -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="parent">Annexe Projects</a>
+                        </li>
+                    </ul>
+                </div>
+    
+                </div>
+            </div>
+            <a href='Contact.html' class="header-section section3">
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                <lord-icon src="https://cdn.lordicon.com/fdxqrdfe.json" trigger="hover" colors="primary:#ffffff">
+                </lord-icon>
+                <h4>Contact Me</h4>
+            </a>
+        </header>
+
+        <!-- Contenu spécifique à chaque page -->
+        <div class="container">
+            <div id="formColumn">
+                <h1>Get in Touch</h1>
+                <form id="contactForm">
+                    <div id="#form" >
+                        <div>
+                            <label for="firstName">First name :</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div>
+                            <label for="lastName">Name :</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone :</label>
+                    <input type="tel" id="phone" name="phone">
+
+                    <label for="subject">Subject :</label>
+                    <input type="text" id="subject" name="subject" required>
+
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div id="mapColumn">
+                <!-- Ajoute votre carte ici -->
+                <div id="map"></div>
+
+                <!-- Ajoute des boutons pour basculer entre les vues -->
+                <div class="boutons">
+                    <button onclick="switchVue('satellite')">Satellite</button>
+                    <button onclick="switchVue('plan')">Map</button>
+                    <button onclick="afficherTrajet()">Show directions</button>
+                </div>
+                
+                <!-- Ajoute la carte centrée à l'emplacement spécifié -->
+                <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+                <script>
+                    var mymap = L.map('map').setView([51.484505,-0.122718], 14);
+                    var satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                        attribution: '© Esri'
+                    });
+
+                    var planLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '© OpenStreetMap contributors'
+                    });
+
+                    // Ajoute un marqueur à l'emplacement spécifié
+                    var marker = L.marker([51.484505,-0.122718]).addTo(mymap)
+                        .bindPopup('21-25 South Lambeth Road')
+                        .openPopup();
+
+                    // Commence avec la vue satellite par défaut
+                    satelliteLayer.addTo(mymap);
+
+                    // Fonction pour basculer entre les vues
+                    function switchVue(vue) {
+                        if (vue === 'satellite') {
+                            mymap.removeLayer(planLayer);
+                            satelliteLayer.addTo(mymap);
+                        } else if (vue === 'plan') {
+                            mymap.removeLayer(satelliteLayer);
+                            planLayer.addTo(mymap);
+                        }
+                    }
+
+                    // Fonction pour afficher le trajet vers le marqueur dans Google Maps
+                    function afficherTrajet() {
+                        var latitude = marker.getLatLng().lat;
+                        var longitude = marker.getLatLng().lng;
+                        var url = 'https://www.google.com/maps/dir/?api=1&destination=' + latitude + ',' + longitude;
+                        window.open(url, '_blank');
+                    }
+                </script>  
+            </div>
+        </div>
+
+        <!-- Contenu commun à chaque page -->
+        <footer>
+            <!-- Ajoute les liens aux réseaux sociaux -->
+            <div class="footer-section reseaux">
+                <h4>Follow me on my social networks :</h4>
+                <a href="https://discord.com/invite/WSPYyzDP9v" target="_blank"><img src="../Others/Pictures/Discord.png"></a>
+                <a href="https://www.instagram.com/tv_slimi/" target="_blank"><img src="../Others/Pictures/Instagram.png"></a>
+                <a href="https://www.twitch.tv/tv_slimi" target="_blank"><img src="../Others/Pictures/Twitch.png"></a>
+                <a href="https://twitter.com/TV_Slimi" target="_blank"><img src="../Others/Pictures/X.png"></a>
+            </div>
+
+            <!-- Ajoute les liens aux fichiers légaux -->
+            <div class="footer-section mentions">
+                <a>Conditions générales</a>
+                <a>Mentions légales</a>
+                <a>Politique de confidentialité</a>
+            </div>
+        </footer>
+    </body>
+</html>
