@@ -1,0 +1,40 @@
+/* footer.css */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    height: 10vh;
+    text-align: center;
+    margin-top: 7vh;
+    display: flex;
+}
+
+.footer-section {
+    display: flex;
+    gap : 5%;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    position : relative;
+}
+
+.footer-section::after {
+    content: '';
+    position: absolute;
+    top: 50%; /* Centrer en hauteur */
+    transform: translateY(-50%); /* Ajuster verticalement de moitié de la hauteur */
+    right: 0;
+    width: 1px; /* Largeur de la barre verticale */
+    height: 70%; /* Hauteur de la barre verticale (ajustez selon vos besoins) */
+    background-color: #fff; /* Couleur de la barre verticale */
+}
+
+/* Désactiver la barre pour le dernier élément */
+.footer-section:last-child::after {
+    display: none;
+}
+
+a img {
+    height : 6vh;
+    aspect-ratio:  1 / 1;
+}
