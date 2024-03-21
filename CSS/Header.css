@@ -1,0 +1,133 @@
+/* header.css */
+
+header {
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    height: 7vh;
+    text-align: center;
+    padding: 2vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+h1{
+    color: #333;
+    margin: 0;
+}
+
+.header-section h2, h3, h4 {
+    margin: 0;
+    color : white ;
+}
+
+.section1 {
+    font-family: 'Amatic SC', sans-serif;
+    font-style: italic ;
+    font-size : 200%;
+    font-stretch: extra-condensed;
+    text-decoration: none;
+}
+
+.section2, .section3 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-stretch: extra-condensed;
+    color : white ;
+    text-decoration: none;
+}
+
+.lord-icon {
+    height : 60%;
+    aspect-ratio:  1 / 1;
+}
+
+/* Style du menu déroulant */
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none; /* Initialement caché */
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu li {
+    position: relative;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    position: relative;
+}
+
+/* Barre blanche sous l'élément survolé */
+.dropdown-menu a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+}
+
+.dropdown-menu a:hover:after {
+    width: 100%;
+}
+
+.dropdown-menu a.active:after,
+.dropdown-menu a:hover:after,
+.parent-1.active a:after,
+.parent-2.active a:after {
+    width: 100%;
+}
+
+.header-section.section2:hover .dropdown-menu {
+    display: block;
+    animation: fade-in 0.3s ease-in-out;
+}
+
+/* Style pour les sous-menus déroulants */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: max-content;
+}
+
+/* Afficher le sous-menu déroulant lors du survol de l'élément parent */
+.dropdown-menu li:hover .sub-menu {
+    display: block;
+    animation: fade-in 0.3s ease-in-out;
+}
+
+.sub-sub-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Placer le sous-menu à droite du menu principal */
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: max-content; /* Adapter la largeur au contenu le plus large */
+}
