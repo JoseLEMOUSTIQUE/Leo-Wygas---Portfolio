@@ -21,7 +21,71 @@ body {
     height: fit-content;
     background-color: #fff;
     margin: 7vh;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
+}
+
+.block {
+    width: 25%;
+    height: 75vh;
+    display: flex;
+    text-align: center;
+}
+
+.block a {
+    text-decoration: none;
+    color: white;
+    display : flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.block:hover {
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+}
+
+.block:not(:first-child) {
+    border-left: 1px solid rgb(255, 255, 255);
+}
+
+.Grogu_Retopology {
+    width: 100%;
+    height: 100%;
+    background-image: url("../Others/Grogu_Retopology/grogu_main.jpg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Grogu_Retopology:hover, .House_Process:hover,.Arsenal_Process:hover,.Naboo_Ship_Retopology:hover {
+    background-position: 40% ;
+}
+
+.House_Process {
+    width: 100%;
+    height: 100%;
+    background-image: url("../Others/House_Process/House_main.jpg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Arsenal_Process {
+    width: 100%;
+    height: 100%;
+    background-image: url("../Others/Arsenal/Capture\ 71_JPG.webp");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Naboo_Ship_Retopology {
+    width: 100%;
+    height: 100%;
+    background-image: url("../Others/Naboo_Ship/Naboo_Ship_Presentation.jpg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
 }
